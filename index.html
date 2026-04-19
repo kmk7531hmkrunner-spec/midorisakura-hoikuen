@@ -5,9 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>みどりさくら保育園 | 社会福祉法人 和枝福祉会 — 横浜市緑区</title>
   <meta name="description" content="横浜市緑区十日市場にある「みどりさくら保育園」の公式サイト。子どもの個性を大切に、愛情あふれる保育を提供しています。見学・入園のご相談はお気軽にどうぞ。">
+  <meta name="robots" content="noindex">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Renovation Banner -->
+  <div class="renovation-banner">
+    【HP新規デザイン試作中】本ページは制作途中のデモ画面であり、内容やレイアウトを調整中です。
+    <span class="privacy-note">※ 本URLは共有された方（あなた）のみが閲覧できる限定公開プレビューです。</span>
+  </div>
 
   <!-- ========== HEADER ========== -->
   <header class="header" id="header">
@@ -330,6 +336,36 @@
           <span class="news-badge badge-info">行事報告</span>
           <span class="news-text">節分の豆まき大会を行いました！年長さんが鬼に扮して大活躍でした。</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEEDBACK / 意見募集 ========== -->
+  <section class="feedback section-pad" id="feedback">
+    <div class="container">
+      <div class="feedback-inner">
+        <h2 class="section-title fade-in">ご意見募集 🕊️</h2>
+        <p class="section-title-en fade-in">Feedback</p>
+        <p class="feedback-lead fade-in">
+          新しいWebサイトをより良くするため、皆様のご意見・ご感想をお待ちしております。<br>
+          「ここが使いづらい」「こんな情報が欲しい」など、お気軽にお寄せください。
+        </p>
+        <form class="feedback-form fade-in" name="feedback" method="POST" data-netlify="true" id="feedbackForm">
+          <input type="hidden" name="form-name" value="feedback">
+          <textarea class="feedback-textarea" name="message" placeholder="こちらにご意見をご記入ください..." required></textarea>
+          <button type="submit" class="feedback-btn">フィードバックを送信する</button>
+        </form>
+        <div id="feedbackSuccess" style="display: none; padding: 40px; border-radius: var(--radius-md); background: var(--green-pale); border: 2px dashed var(--green-mid);" class="fade-in">
+          <div style="font-size: 2.5rem; margin-bottom: 16px;">🌸</div>
+          <h3 style="color: var(--green-deep); margin-bottom: 8px;">ご意見ありがとうございます！</h3>
+          <p style="color: var(--text-mid); font-size: 0.9rem;">
+            お寄せいただいた貴重なフィードバックを参考に、<br>
+            より良いWebサイトを目指して制作を進めてまいります。
+          </p>
+        </div>
+        <p style="margin-top: 24px; font-size: 0.75rem; color: var(--text-light);" class="fade-in">
+          ※ このページは、管理者からURLを送られた方にのみ限定公開されています。
+        </p>
       </div>
     </div>
   </section>

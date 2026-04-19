@@ -63,6 +63,24 @@ ul { list-style: none; }
   transform: translateY(0);
 }
 
+/* --- Renovation Banner --- */
+.renovation-banner {
+  background: var(--green-deep);
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.5;
+  border-bottom: 3px solid var(--pink-vivid);
+}
+.renovation-banner .privacy-note {
+  display: block;
+  font-size: 0.75rem;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
 /* --- Section Title --- */
 .section-title {
   font-family: var(--font-accent);
@@ -92,7 +110,7 @@ ul { list-style: none; }
    HEADER / NAV
    ============================================= */
 .header {
-  position: fixed;
+  position: sticky;
   top: 0; left: 0; right: 0;
   z-index: 1000;
   padding: 16px 0;
@@ -872,6 +890,34 @@ ul { list-style: none; }
 /* =============================================
    RESPONSIVE
    ============================================= */
+/* --- Feedback Form --- */
+.feedback { background: var(--white-pure); border-top: 1px solid var(--pink-light); }
+.feedback-inner { max-width: 600px; margin: 0 auto; text-align: center; }
+.feedback-lead { color: var(--text-mid); font-size: 0.95rem; margin-bottom: 32px; }
+.feedback-form { display: flex; flex-direction: column; gap: 16px; }
+.feedback-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 16px;
+  border: 2px solid var(--green-light);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+}
+.feedback-textarea:focus { outline: none; border-color: var(--green-mid); box-shadow: 0 0 0 3px var(--green-pale); }
+.feedback-btn {
+  background: var(--green-deep);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.feedback-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+
 @media (max-width: 900px) {
   .hero-two-col { grid-template-columns: 1fr; gap: 40px; }
   .hero-info-cards { flex-direction: row; flex-wrap: wrap; }

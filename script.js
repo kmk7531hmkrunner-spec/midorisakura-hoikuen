@@ -48,6 +48,34 @@ const observer = new IntersectionObserver(
 );
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+// --- AJAX Form Submission (Netlify) ---
+const feedbackForm = document.getElementById('feedbackForm');
+const feedbackSuccess = document.getElementById('feedbackSuccess');
+
+if (feedbackForm) {
+  feedbackForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(feedbackForm);
+    
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+    .then(() => {
+      feedbackForm.style.display = 'none';
+      feedbackSuccess.style.display = 'block';
+      feedbackSuccess.classList.add('visible');
+    })
+    .catch((error) => {
+      console.error('Form submission error:', error);
+      alert('送信時にエラーが発生しました。もう一度お試しください。');
+    });
+  });
+}
+
+console.log('🌈 Project Loaded!');
+
 // --- Schedule tabs ---
 function switchTab(type) {
   // buttons
